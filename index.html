@@ -3,28 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的主页</title>
+    <title>我的静态网站</title>
     <style>
-        *{margin:0;padding:0;box-sizing:border-box;font-family:system-ui}
-        body{background:#f4f4f4;padding:40px 20px}
-        .card{max-width:420px;margin:0 auto;background:#fff;border-radius:16px;padding:32px;text-align:center}
-        .avatar{width:90px;height:90px;border-radius:50%;object-fit:cover;margin-bottom:16px}
-        .name{font-size:22px;font-weight:600;margin-bottom:8px}
-        .desc{color:#666;margin-bottom:28px}
-        a.link{display:block;text-decoration:none;color:#222;border:1px solid #ddd;border-radius:12px;padding:14px;margin-bottom:12px;transition:0.2s}
-        a.link:hover{background:#f0f0f0}
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, sans-serif; line-height: 1.6; color: #333; }
+        
+        /* 导航栏 */
+        nav { background: #2c3e50; padding: 1rem 5%; }
+        nav a { color: white; text-decoration: none; margin-right: 2rem; }
+        
+        /* 主视觉区 */
+        .hero { background: #3498db; color: white; padding: 5rem 5%; text-align: center; }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+        
+        /* 内容区 */
+        .container { max-width: 1200px; margin: 3rem auto; padding: 0 5%; }
+        .section { margin-bottom: 3rem; }
+        .section h2 { margin-bottom: 1rem; color: #2c3e50; }
+        
+        /* 三栏卡片 */
+        .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+        .card { padding: 1.5rem; border: 1px solid #eee; border-radius: 8px; }
+        
+        /* 页脚 */
+        footer { background: #2c3e50; color: white; text-align: center; padding: 2rem; margin-top: 3rem; }
     </style>
 </head>
 <body>
-    <div class="card">
-        <img class="avatar" src="3b27416a3e72acb766d0ac9bfb39ce2c.jpg">
-        <video class="avatar" controls muted loop poster="3b27416a3e72acb766d0ac9bfb39ce2c.jpg" src="63bdf350ff3b3df13c140226b8687236.mp4">
-</video>
-        <div class="name">你的名字</div>
-        <div class="desc">随便记录一点兴趣和日常</div>
-        <a class="link" href="https://github.com/xxx">GitHub</a>
-        <a class="link" href="https://www.bilibili.com/">B站</a>
-        <a class="link" href="你的笔记地址">读书笔记</a>
+    <nav>
+        <a href="#home">首页</a>
+        <a href="#about">关于</a>
+        <a href="#services">服务</a>
+        <a href="#contact">联系</a>
+    </nav>
+
+    <section class="hero" id="home">
+        <h1>欢迎来到我的网站</h1>
+        <p>这是一个纯静态的HTML/CSS模板示例</p>
+    </section>
+
+    <div class="container">
+        <section class="section" id="about">
+            <h2>关于我们</h2>
+            <p>这里填写网站介绍内容。静态网站加载速度快、安全性高，适合展示类页面。</p>
+        </section>
+
+        <section class="section" id="services">
+            <h2>服务项目</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>服务一</h3>
+                    <p>服务描述内容</p>
+                </div>
+                <div class="card">
+                    <h3>服务二</h3>
+                    <p>服务描述内容</p>
+                </div>
+                <div class="card">
+                    <h3>服务三</h3>
+                    <p>服务描述内容</p>
+                </div>
+            </div>
+        </section>
     </div>
+
+    <footer id="contact">
+        <p>© 2026 我的静态网站 | 联系方式：example@email.com</p>
+    </footer>
 </body>
 </html>
+
